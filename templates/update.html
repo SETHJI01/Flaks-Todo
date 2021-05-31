@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}
+        Update
+    {% endblock title %}
+{% block body %}
+        
+      <div class="container my-3">
+          <h2>Add a Task</h2>
+        <form action="/update/{{result.sno}}" method="POST">
+            <div class="mb-3">
+              <label for="exampleInputText1" class="form-label">Title Of the Task</label>
+              <input type="text" class="form-control" id="exampleInputText1" name ="title" value={{result.title}} aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputText1" class="form-label">Description</label>
+              <input type="text" class="form-control" id="exampleInputText1" value={{result.desc}} name="desc">
+            </div>
+            <button href="" type="submit" class="btn btn-outline-dark">Update</button>
+          </form>
+      </div>
+{% endblock body %}
